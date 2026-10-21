@@ -1,0 +1,11 @@
+name: sheets_engine
+description: Spreadsheet engine — sparse grid model, formula tokenizer/parser/AST, dependency graph with topological recalculation, charts data, pivot summaries, CSV/JSON I/O. No Flutter imports.
+publish_to: none
+version: 0.1.0
+
+environment:
+  sdk: ^3.5.0
+
+dev_dependencies:
+  lints: ^6.1.0
+  test: ^1.33.0

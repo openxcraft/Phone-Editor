@@ -1,0 +1,15 @@
+name: sync_engine
+description: Offline-first sync primitives — RGA text CRDT, document delta sync, field-level merge with conflict copies, resumable sync session. Pure Dart, no network, no clocks.
+publish_to: none
+version: 0.1.0
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  doc_engine:
+    path: ../doc_engine
+
+dev_dependencies:
+  lints: ^6.1.0
+  test: ^1.33.0

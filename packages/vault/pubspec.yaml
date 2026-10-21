@@ -1,0 +1,16 @@
+name: vault
+description: Encryption at rest for documents — AES-256-GCM envelope wrapping any doc_engine DocumentStore. Keys are supplied via KeyProvider and are never stored with ciphertext records.
+publish_to: none
+version: 0.1.0
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  cryptography: ^2.9.0
+  doc_engine:
+    path: ../doc_engine
+
+dev_dependencies:
+  lints: ^6.1.0
+  test: ^1.33.0

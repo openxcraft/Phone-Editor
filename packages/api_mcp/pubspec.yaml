@@ -1,0 +1,21 @@
+name: api_mcp
+description: Provider-agnostic external model adapter plus MCP client and local MCP server. Neutral labels only ("External model" / "API provider").
+publish_to: none
+version: 0.1.0
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  doc_engine:
+    path: ../doc_engine
+  pdf_engine:
+    path: ../pdf_engine
+  presentation_engine:
+    path: ../presentation_engine
+  sheets_engine:
+    path: ../sheets_engine
+
+dev_dependencies:
+  lints: ^6.1.0
+  test: ^1.33.0

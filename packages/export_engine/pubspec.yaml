@@ -1,0 +1,18 @@
+name: export_engine
+description: Deterministic OOXML export/import — PPTX for presentations, XLSX for sheets — from the neutral engine models. No Flutter imports.
+publish_to: none
+version: 0.1.0
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  archive: ^4.5.2
+  presentation_engine:
+    path: ../presentation_engine
+  sheets_engine:
+    path: ../sheets_engine
+
+dev_dependencies:
+  lints: ^6.1.0
+  test: ^1.33.0

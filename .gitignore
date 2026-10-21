@@ -1,0 +1,18 @@
+# Build artifacts and tool caches — never committed.
+.dart_tool/
+.packages
+pubspec.lock
+build/
+*.iml
+.idea/
+
+# Rust build output (Cargo.lock IS committed).
+rust/**/target/
+
+# Local databases and test scratch.
+*.db
+*.db-journal
+
+# Snapshot sync metadata (kept beside the source dir, never inside it).
+*.muse-github-snapshot-sync.json
+*.muse-github-snapshot-sync.json.tmp-*

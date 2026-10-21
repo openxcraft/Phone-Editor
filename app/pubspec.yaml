@@ -1,0 +1,28 @@
+name: workspace_app
+description: Offline-first documents, presentations, PDF and sheets workspace.
+publish_to: none
+version: 0.1.0
+
+environment:
+  sdk: ^3.5.0
+  flutter: ">=3.24.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  doc_engine:
+    path: ../packages/doc_engine
+  path: ^1.9.0
+  path_provider: ^2.1.4
+  # Bundles a modern SQLite for the doc_engine sqlite3 package on
+  # Android/iOS. Upstream marks 0.6.0 as end-of-life; Phase 1 evaluates
+  # moving this layer to drift's native-assets bundling (see PLAN.md).
+  sqlite3_flutter_libs: ^0.6.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true

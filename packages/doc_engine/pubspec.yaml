@@ -1,0 +1,15 @@
+name: doc_engine
+description: Format-neutral document engine — node tree, operations, undo/redo, deterministic JSON, SQLite persistence, Markdown export. No Flutter imports.
+publish_to: none
+version: 0.1.0
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  archive: ^4.5.2
+  sqlite3: ^3.7.1
+
+dev_dependencies:
+  lints: ^6.1.0
+  test: ^1.33.0
