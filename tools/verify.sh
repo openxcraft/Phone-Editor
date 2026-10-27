@@ -21,14 +21,18 @@ trap 'rm -f "$TMPDB"' EXIT
 sqlite3 "$TMPDB" < "$ROOT/db/schema_v1.sql"
 sqlite3 "$TMPDB" "SELECT value FROM schema_meta WHERE key = 'schema_version';"
 
-if [ -x "$HOME/workspace/tools/cargo/bin/cargo" ]; then
+if command -v cargo >/dev/null 2>&1; then
   echo "== rust/doc_core (golden vectors vs Dart) =="
+  cd "$ROOT/rust/doc_core"
+  cargo test
+elif [ -x "$HOME/workspace/tools/cargo/bin/cargo" ]; then
+  echo "== rust/doc_core (workspace toolchain) =="
   export RUSTUP_HOME=${RUSTUP_HOME:-$HOME/workspace/tools/rustup}
   export CARGO_HOME=${CARGO_HOME:-$HOME/workspace/tools/cargo}
   cd "$ROOT/rust/doc_core"
   "$CARGO_HOME/bin/cargo" test
 else
-  echo "== rust/doc_core SKIPPED (cargo not installed in workspace tools) =="
+  echo "== rust/doc_core SKIPPED (cargo not installed) =="
 fi
 
 echo "== security scan =="
